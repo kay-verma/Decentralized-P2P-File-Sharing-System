@@ -1,21 +1,20 @@
-# Decentralized-P2P-File-Sharing-System
-A Decentralized file sharing system using distributed hash table (DHT) and file replication
+# Decentralized P2P File Sharing
+
 
 <h4><strong>INTRODUCTION:</strong></h4>
 	
-This implementation is Java based Simple Decentralized P2P file sharing system. Unlike Centralized File Sharing system, 
-here there is no centralized Index Server. We have Peers, i.e. both acting as Server as well as Client.
-Each of these peers has its Hash table which stores Key/Value (Filename/ PeerID) pairs. 
-The components viz. Decentralized Indexing Server, its Peer and its DHT, works as follows:
+This project is a Java-based implementation of a simple decentralized P2P file sharing system. Unlike centralized file sharing systems, there is no central index server in this system. Instead, each peer acts as both a server and a client. Each peer has its own hash table that stores key/value pairs of filenames and peer IDs.
+<br> 
+The system consists of three main components:
 <ol> 
-<li><strong>Decentralized Indexing Server</strong>
-		This server indexes the contents of all of the peers that register with it. It also provides search facility to peers, so that peer can interact with others to obtain a file from other peers. Implements registry(peerID, Filename) & search()</li>
+<li><strong>Decentralized Indexing Server:</strong>
+		 This server indexes the contents of all of the peers that register with it. It also provides a search facility to peers, so that they can find other peers that have the files they are looking for.</li>
 
-<li><strong>A Peer</strong>
-		The peer acts as a server and client both. As a Client, it provides interfaces through which users can register a file and view search results where the server returns a list of all other peers that hold the file. The user can pick one such peer and the client then connects to this peer and downloads the file. As a Server, it accepts queries from other peers and sends the requested file when receiving a request.</li>
+<li><strong>Distributed Hash Table (DHT):/strong>
+		A DHT is a hash table that stores values in the form of key/value pairs. The hash table stores these values into buckets, which are computed by using a hash function. The hash function computes the hash value for the key and allocates it to a particular bucket in the table. In this project, each peer has its own DHT. The key/value pairs are filenames and peer IDs.</li>
 
-<li><strong>Distributed Hash Table (DHT)</strong>
-		A DHT is a hash table which store values in form of Key/Value pairs. The hash table stores these values into buckets, which is computed by using a hash function. The hash function computes the hash value for the Key and allocates it to a particular bucket in table. In this assignment, each Peer has its own Hash table. The Key/ Value pairs are Filename/ PeerID.</li>
+<li><strong>Peer</strong>
+		A peer acts as both a server and a client. As a client, it can register files with the indexing server, search for files, and download files from other peers. As a server, it can respond to search queries from other peers and send files to peers that have requested them.</li>
 </ol>
 
 <h4><strong>BEFORE EXECUTION:</strong></h4>
