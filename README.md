@@ -10,7 +10,7 @@ The system consists of three main components:
 <li><strong>Decentralized Indexing Server:</strong>
 		 This server indexes the contents of all of the peers that register with it. It also provides a search facility to peers, so that they can find other peers that have the files they are looking for.</li>
 
-<li><strong>Distributed Hash Table (DHT):/strong>
+<li><strong>Distributed Hash Table (DHT):</strong>
 		A DHT is a hash table that stores values in the form of key/value pairs. The hash table stores these values into buckets, which are computed by using a hash function. The hash function computes the hash value for the key and allocates it to a particular bucket in the table. In this project, each peer has its own DHT. The key/value pairs are filenames and peer IDs.</li>
 
 <li><strong>Peer</strong>
